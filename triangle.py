@@ -1,20 +1,19 @@
-'''Author: ALDA TREESA JOSY 
-Date:17/01/2024
-Description:If/Else Condition Task: Use nested if/else statements to determine the type of triangle based on side lengths. Problem Description:You are given three integers representing the lengths of the sides of a triangle. You need to determine the type of triangle:'''
-a = int(input("Enter the first side: "))
-b = int(input("Enter the second side: "))
-c = int(input("Enter the third side: "))
+def is_right_triangle():
+    s1=[]
 
-if a + b > c and b + c > a and c + a > b:
-    
-    if a == b == c:
-        print("The triangle is Equilateral.")
-    else:
-        
-        if a == b or b == c or c == a:
-            print("The triangle is Isosceles.")
-        else:
-            
-            print("The triangle is Scalene.")
-else:
-    print("The given sides do not form a triangle.")
+    a=int(input("enter a number"))
+    s1.append(a)
+
+    b=int(input("enter a number"))
+    s1.append(b)
+
+    c=int(input("enter a number"))
+    s1.append(c)
+    s1.sort()
+
+
+    if s1[2]**2==s1[0]**2+s1[1]**2:
+        print("the triangle is a valid")
+    else :
+        print("the triangle is not valid")
+is_right_triangle()
